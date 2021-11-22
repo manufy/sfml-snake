@@ -84,11 +84,6 @@ void Game::update(sf::Time deltaTime)
 
 void Game::render()
 {
-    //if (!texture.loadFromFile("/Users/tahajalili/Desktop/Eagle.png"))
-    //{
-    //  std::cout << "Error occured" << std::endl;
-    //}
-
     mWindow.clear();
     mWindow.draw(rect);
     mWindow.display();
@@ -116,19 +111,19 @@ void Game::proccessEvent()
 
 void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed)
 {
-    if (key == sf::Keyboard::W)
+    if (key == sf::Keyboard::Up)
     {
         mIsMovingUp = isPressed;
     }
-    else if (key == sf::Keyboard::S)
+    else if (key == sf::Keyboard::Down)
     {
         mIsMovingDown = isPressed;
     }
-    else if (key == sf::Keyboard::D)
+    else if (key == sf::Keyboard::Right)
     {
         mIsMovingRight = isPressed;
     }
-    else if (key == sf::Keyboard::A)
+    else if (key == sf::Keyboard::Left)
     {
         mIsMovingLeft = isPressed;
     }

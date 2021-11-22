@@ -1,4 +1,5 @@
 
+
 //
 // Disclaimer:
 // ----------
@@ -17,11 +18,33 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
+#include "FileLogger.hpp"
+
 // Here is a small helper for you! Have a look.
 #include "ResourcePath.hpp"
+#include "Game.hpp"
 
 int main(int, char const**)
 {
+    
+    printf("2111111");
+    Game game;
+        game.run();
+    return EXIT_SUCCESS;
+    
+    
+    
+    
+    
+    
+    
+    // Create object
+    ige::FileLogger myLog ("1.0.4.2", "testfile.txt");
+
+    // Writing warnings or errors to file is very easy and C++ style
+    myLog << ige::FileLogger::e_logType::LOG_WARNING << "Hey! ... This is a warning message!";
+    myLog << ige::FileLogger::e_logType::LOG_ERROR << "WOW! Something really wrong is happening here!";
+    myLog << "This is just a simple text";
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
 
@@ -52,10 +75,12 @@ int main(int, char const**)
     if (!music.openFromFile(resourcePath() + "nice_music.ogg")) {
         return EXIT_FAILURE;
     }
-
-    // Play the music
-    music.play();
-
+    int x =0;
+    int y =0;
+    bool isMovingUp = false;
+ 
+    
+    //music.play();
     // Start the game loop
     while (window.isOpen())
     {
@@ -72,8 +97,28 @@ int main(int, char const**)
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                 window.close();
             }
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Left) {
+                isMovingUp = true;
+            }
+            if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Left) {
+                isMovingUp = false;
+            }
+            
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Up) {
+                y++;
+                printf("up 1");
+            }
         }
 
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+        {
+            x--;
+        }
+        
+        if (isMovingUp == true) y++;
+        
+        sprite.setPosition(x+10, y);
+        
         // Clear screen
         window.clear();
 
@@ -89,3 +134,4 @@ int main(int, char const**)
 
     return EXIT_SUCCESS;
 }
+
