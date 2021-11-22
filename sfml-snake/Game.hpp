@@ -37,7 +37,7 @@ public:
     void run();
 
 private:
-    void proccessEvent();
+    void processEvent();
     void update(sf::Time deltaTime);
     void render();
     void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);

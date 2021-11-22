@@ -1,29 +1,19 @@
 //
 //  Game.cpp
-//  sfml-snake
-//
-//  Created by Manu on 23/11/21.
-//  Copyright © 2021 armaril. All rights reserved.
-//
-
-#include <stdio.h>
-
-//
-//  Game.cpp
 //  demo1
 //
 //  Created by Manu on 22/11/21.
 //  Copyright © 2021 Manu. All rights reserved.
 //
 
+#include <stdio.h>
 #include "Game.hpp"
 
-
 Game::Game()
-    : //Make sure to initialize member variables.
-     playerSpeed(100.f),
+    :
+     playerSpeed(500.0f),
      TimePerFrame(sf::seconds(1.f / 60.f)),
-     mWindow(sf::VideoMode(640, 480), "SFML Application"),
+     mWindow(sf::VideoMode(1024, 768), "SFML Snake"),
      key(sf::Keyboard::Unknown),
      isPressed(false),
      mIsMovingUp(false),
@@ -31,7 +21,6 @@ Game::Game()
      mIsMovingRight(false),
      mIsMovingLeft(false)
 {
-    //  rect.setTexture(texture);
     rect.setFillColor(sf::Color::Red);
     rect.setSize(sf::Vector2f(20.0f, 20.0f));
 }
@@ -43,13 +32,13 @@ void Game::run()
 
     while (mWindow.isOpen())
     {
-        proccessEvent();
+        processEvent();
         sf::Time elapsedTime = clock.restart();
         timeSinceLastUpdate += elapsedTime;
         while (timeSinceLastUpdate > TimePerFrame)
         {
             timeSinceLastUpdate -= TimePerFrame;
-            proccessEvent();
+            processEvent();
             update(TimePerFrame);
         }
         render();
@@ -89,7 +78,7 @@ void Game::render()
     mWindow.display();
 }
 
-void Game::proccessEvent()
+void Game::processEvent()
 {
     sf::Event event;
     while (mWindow.pollEvent(event)) {
