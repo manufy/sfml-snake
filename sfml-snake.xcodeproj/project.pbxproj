@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		323879D7274C5B380093F130 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 323879D6274C5B380093F130 /* ResourcePath.mm */; };
 		323879DA274C5B380093F130 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 323879D9274C5B380093F130 /* main.cpp */; };
-		323879DD274C5B380093F130 /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 323879DC274C5B380093F130 /* cute_image.jpg */; };
 		323879DF274C5B380093F130 /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = 323879DE274C5B380093F130 /* nice_music.ogg */; };
 		323879E1274C5B380093F130 /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 323879E0274C5B380093F130 /* sansation.ttf */; };
 		323879E3274C5B380093F130 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 323879E2274C5B380093F130 /* icon.png */; };
@@ -17,6 +16,9 @@
 		32C62009274C6A33003BD56A /* background-sea-00.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C62008274C6A33003BD56A /* background-sea-00.png */; };
 		32C6200B274C6A41003BD56A /* destroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C6200A274C6A41003BD56A /* destroyer.png */; };
 		32C6200D274C6A52003BD56A /* submarine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C6200C274C6A52003BD56A /* submarine.jpg */; };
+		32C62011274D6F8E003BD56A /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32C6200F274D6F8E003BD56A /* Entity.cpp */; };
+		32C62014274D700E003BD56A /* TileMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32C62012274D700E003BD56A /* TileMap.cpp */; };
+		32C62016274D708C003BD56A /* tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C62015274D708C003BD56A /* tileset.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,6 @@
 		323879D6274C5B380093F130 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 		323879D8274C5B380093F130 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		323879D9274C5B380093F130 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		323879DC274C5B380093F130 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cute_image.jpg; path = ../cute_image.jpg; sourceTree = "<group>"; };
 		323879DE274C5B380093F130 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = nice_music.ogg; path = ../nice_music.ogg; sourceTree = "<group>"; };
 		323879E0274C5B380093F130 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sansation.ttf; path = ../sansation.ttf; sourceTree = "<group>"; };
 		323879E2274C5B380093F130 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
@@ -35,6 +36,11 @@
 		32C62008274C6A33003BD56A /* background-sea-00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-sea-00.png"; sourceTree = "<group>"; };
 		32C6200A274C6A41003BD56A /* destroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = destroyer.png; sourceTree = "<group>"; };
 		32C6200C274C6A52003BD56A /* submarine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = submarine.jpg; sourceTree = "<group>"; };
+		32C6200F274D6F8E003BD56A /* Entity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Entity.cpp; sourceTree = "<group>"; };
+		32C62010274D6F8E003BD56A /* Entity.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Entity.hpp; sourceTree = "<group>"; };
+		32C62012274D700E003BD56A /* TileMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TileMap.cpp; sourceTree = "<group>"; };
+		32C62013274D700E003BD56A /* TileMap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TileMap.hpp; sourceTree = "<group>"; };
+		32C62015274D708C003BD56A /* tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tileset.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				323879DB274C5B380093F130 /* Resources */,
-				323879D9274C5B380093F130 /* main.cpp */,
-				323879D6274C5B380093F130 /* ResourcePath.mm */,
-				323879D8274C5B380093F130 /* ResourcePath.hpp */,
-				323879E9274C5BC40093F130 /* FileLogger.hpp */,
-				323879EA274C5C0C0093F130 /* Game.hpp */,
-				323879EB274C5C290093F130 /* Game.cpp */,
+				32C62017274DA82B003BD56A /* src */,
 			);
 			path = "sfml-snake";
 			sourceTree = "<group>";
@@ -91,9 +92,7 @@
 			children = (
 				32C62007274C6A04003BD56A /* Graphics */,
 				323879D4274C5B380093F130 /* Supporting Files */,
-				323879DC274C5B380093F130 /* cute_image.jpg */,
 				323879DE274C5B380093F130 /* nice_music.ogg */,
-				32C62008274C6A33003BD56A /* background-sea-00.png */,
 				323879E0274C5B380093F130 /* sansation.ttf */,
 				323879E2274C5B380093F130 /* icon.png */,
 			);
@@ -103,10 +102,37 @@
 		32C62007274C6A04003BD56A /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				32C62015274D708C003BD56A /* tileset.png */,
 				32C6200C274C6A52003BD56A /* submarine.jpg */,
+				32C62008274C6A33003BD56A /* background-sea-00.png */,
 				32C6200A274C6A41003BD56A /* destroyer.png */,
 			);
 			path = Graphics;
+			sourceTree = "<group>";
+		};
+		32C62017274DA82B003BD56A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				32C62018274DA8B1003BD56A /* utils */,
+				323879D9274C5B380093F130 /* main.cpp */,
+				32C62012274D700E003BD56A /* TileMap.cpp */,
+				32C62013274D700E003BD56A /* TileMap.hpp */,
+				32C6200F274D6F8E003BD56A /* Entity.cpp */,
+				32C62010274D6F8E003BD56A /* Entity.hpp */,
+				323879EB274C5C290093F130 /* Game.cpp */,
+				323879EA274C5C0C0093F130 /* Game.hpp */,
+				323879D8274C5B380093F130 /* ResourcePath.hpp */,
+				323879D6274C5B380093F130 /* ResourcePath.mm */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		32C62018274DA8B1003BD56A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				323879E9274C5BC40093F130 /* FileLogger.hpp */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +163,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = armaril;
 				TargetAttributes = {
 					323879D0274C5B380093F130 = {
@@ -171,10 +197,10 @@
 				323879E3274C5B380093F130 /* icon.png in Resources */,
 				32C6200B274C6A41003BD56A /* destroyer.png in Resources */,
 				32C6200D274C6A52003BD56A /* submarine.jpg in Resources */,
+				32C62016274D708C003BD56A /* tileset.png in Resources */,
 				323879E1274C5B380093F130 /* sansation.ttf in Resources */,
 				323879DF274C5B380093F130 /* nice_music.ogg in Resources */,
 				32C62009274C6A33003BD56A /* background-sea-00.png in Resources */,
-				323879DD274C5B380093F130 /* cute_image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,8 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32C62011274D6F8E003BD56A /* Entity.cpp in Sources */,
 				323879EC274C5C290093F130 /* Game.cpp in Sources */,
 				323879DA274C5B380093F130 /* main.cpp in Sources */,
+				32C62014274D700E003BD56A /* TileMap.cpp in Sources */,
 				323879D7274C5B380093F130 /* ResourcePath.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,14 +245,40 @@
 		323879E4274C5B380093F130 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Library/Frameworks/,
 					"$(inherited)",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include/,
 					"$(inherited)",
@@ -234,6 +288,7 @@
 					"$(inherited)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(SFML_SYSTEM)",
@@ -261,14 +316,39 @@
 		323879E5274C5B380093F130 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					/Library/Frameworks/,
 					"$(inherited)",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include/,
 					"$(inherited)",
@@ -306,6 +386,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "sfml-snake/sfml-snake-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
@@ -319,6 +401,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "sfml-snake/sfml-snake-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";

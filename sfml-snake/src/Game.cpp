@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "Game.hpp"
 #include "ResourcePath.hpp"
+#include "TileMap.hpp"
 
 Game::Game()
     :
@@ -24,10 +25,22 @@ Game::Game()
 {
     rect.setFillColor(sf::Color::Red);
     rect.setSize(sf::Vector2f(20.0f, 20.0f));
+    
+
+
+     
 }
 
-void Game::run()
+int Game::run()
+
 {
+    
+    // create the tilemap from the level definition
+   /* TileMap map;
+    if (!map.load("tileset.png", sf::Vector2u(32, 32), level, 16, 8))
+        return -1; */
+    
+    
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
 
@@ -51,6 +64,7 @@ void Game::run()
         renderBackground(backgroundSprite);
         render();
     }
+    return EXIT_SUCCESS;
 }
 
 

@@ -27,9 +27,9 @@
 int main(int, char const**)
 {
     
-    printf("2111111");
+    printf("-- Init --");
     Game game;
-        game.run();
+    game.run();
     return EXIT_SUCCESS;
     
     

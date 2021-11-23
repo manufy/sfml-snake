@@ -34,7 +34,7 @@ class Game
 {
 public:
     Game();
-    void run();
+    int run();
 
 private:
     void processEvent();
