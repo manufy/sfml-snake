@@ -8,17 +8,8 @@
 
 #include "Entity.hpp"
 
-
-class MyEntity : public sf::Drawable, public sf::Transformable
+void MyEntity::draw(sf::RenderTarget& target, sf::RenderStates states)
 {
-public:
-
-    // add functions to play with the entity's geometry / colors / texturing...
-
-private:
-
-    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
-    {
         // apply the entity's transform -- combine it with the one that was passed by the caller
         states.transform *= getTransform(); // getTransform() is defined by sf::Transformable
 
@@ -29,8 +20,7 @@ private:
 
         // draw the vertex array
         target.draw(m_vertices, states);
-    }
+}
 
-    sf::VertexArray m_vertices;
-    sf::Texture m_texture;
-};
+   
+

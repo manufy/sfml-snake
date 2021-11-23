@@ -14,3 +14,19 @@
 #endif /* Entity_hpp */
 
 #include <SFML/Graphics.hpp>
+
+class MyEntity: public sf::Drawable, public sf::Transformable
+{
+public:
+
+    // add functions to play with the entity's geometry / colors / texturing...
+
+private:
+    
+    sf::VertexArray m_vertices;
+    sf::Texture m_texture;
+
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states);
+  
+};
+
