@@ -40,6 +40,7 @@ private:
     void processEvent();
     void update(sf::Time deltaTime);
     void render();
+    void renderBackground(sf::Sprite sprite);
     void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
 
 private:

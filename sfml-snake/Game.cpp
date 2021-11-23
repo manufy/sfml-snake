@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include "Game.hpp"
+#include "ResourcePath.hpp"
 
 Game::Game()
     :
@@ -30,6 +31,12 @@ void Game::run()
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
 
+    // Load a sprite to display
+    sf::Texture texture;
+    if (!texture.loadFromFile(resourcePath() + "background-sea-00.png")) {
+        return EXIT_FAILURE;
+    }
+    sf::Sprite backgroundSprite(texture);
     while (mWindow.isOpen())
     {
         processEvent();
@@ -41,6 +48,7 @@ void Game::run()
             processEvent();
             update(TimePerFrame);
         }
+        renderBackground(backgroundSprite);
         render();
     }
 }
@@ -71,9 +79,16 @@ void Game::update(sf::Time deltaTime)
 
 }
 
-void Game::render()
+void Game::renderBackground(sf::Sprite sprite)
 {
     mWindow.clear();
+    sprite.setPosition(0,0);
+    mWindow.draw(sprite);
+}
+
+void Game::render()
+{
+    
     mWindow.draw(rect);
     mWindow.display();
 }
